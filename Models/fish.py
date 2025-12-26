@@ -7,7 +7,7 @@ class Fish:
         self.__sex = sex
         self.__sightings = sightings
         self.__caught = caught
-        self.__images = images
+        self.__images = images if images else []
 
     def get_sex(self) -> str:
         '''Returns the sex of the fish'''
