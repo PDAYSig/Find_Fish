@@ -1,5 +1,7 @@
-class Image:
-    '''An image'''
+from PIL import Image
+
+class Photo:
+    '''A photo of a fish'''
     def __init__(self, file_path : str, fish_id : int | None = None):
         self.__file_path = file_path
         self.__fish_id = fish_id
@@ -12,6 +14,6 @@ class Image:
         '''Returns the id of the fish in the image'''
         return self.__fish_id
 
-    def get_file_path(self) -> str:
+    def get_image(self) -> Image:
         '''returns the filepath of the image'''
-        return self.__file_path
+        return Image.open(self.__file_path, 'r')
