@@ -31,10 +31,10 @@ class Fish:
         '''Gets the caught status of a fish'''
         return self.__caught
 
-    def get_images(self) -> list[Image]:
+    def get_photos(self) -> list[Photo]:
         '''returns a list of image objects related to the fish'''
         return self.__images
 
-    def add_image(self, image : Image) -> None:
+    def add_photo(self, photo : Photo) -> None:
         '''Adds an image to the list of images'''
-        self.__images.append(image)
+        self.__images.append(photo)
