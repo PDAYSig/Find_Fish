@@ -1,13 +1,15 @@
 '''Fish objects'''
-from Models.image import Image
+from PIL import Image
+from Models.photo import Photo
+
 class Fish:
     '''Represents a fish object'''
-    def __init__(self, fish_id : int, sex : str, sightings : int, caught : bool = True, images : list[Image] = None):
+    def __init__(self, fish_id : int, sex : str, sightings : int, caught : bool = True, photos : list[Photo] = None):
         self.fish_id = fish_id
         self.__sex = sex
         self.__sightings = sightings
         self.__caught = caught
-        self.__images = images if images else []
+        self.__images = photos if photos else []
 
     def get_sex(self) -> str:
         '''Returns the sex of the fish'''
