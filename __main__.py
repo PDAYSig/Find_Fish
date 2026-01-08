@@ -1,12 +1,15 @@
+from PIL import Image, ImageFile, ImageDraw
 from Models.fish import Fish
-from Models.image import Image
+from Models.photo import Photo
+from Yolo_work.find_fish import find_fish
+from Yolo_work.image_work import ImageWork
+PHOTO = "fish_photograph.jpeg"
 
-
-lax = Fish(1, 'm', 2, True)
-
-print(lax.get_sex())
-
-pic = Image("https://github.com/PDAYSig/image_recognition_python.git", 1)
-lax.add_image(pic)
-
-print(lax.get_images())
+# new : Image = ImageWork.resize_image("fiskimynd.jpeg")
+image = Image.open(PHOTO)
+fish = find_fish()
+bbox_and_conf = fish.locate_fish_bbox(PHOTO)
+draw = ImageDraw.Draw(image)
+draw.rectangle(bbox_and_conf[0], outline="red", width=3)
+print(bbox_and_conf[1])
+image.show()
