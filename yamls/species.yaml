@@ -1,0 +1,9 @@
+path: species_dataset
+train: images/train
+val: images/val
+
+names:
+  0: salmon
+  1: brown trout
+  2: sea trout
+  3: arctic char

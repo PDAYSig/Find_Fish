@@ -38,3 +38,7 @@ class Fish:
     def add_photo(self, photo : Photo) -> None:
         '''Adds an image to the list of images'''
         self.__images.append(photo)
+
+    def __str__(self) -> str:
+        '''String representation of a fish'''
+        return f"Fish with id: {self.fish_id}\nSex: {self.__sex}\nHas been sighted {self.__sightings} times"

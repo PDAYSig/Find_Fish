@@ -2,9 +2,10 @@ from ultralytics import YOLO
 from ultralytics.engine.results import Results
 
 class find_fish:
+    '''Image detection for fish'''
     def __init__(self):
         pass
-    
+
     def __best_bbox(self, boxes : list[list[tuple, float]]) -> tuple[tuple, float]:
         '''Finds the box with the highest confidence'''
         best_box : tuple[tuple, float] = boxes[0]
