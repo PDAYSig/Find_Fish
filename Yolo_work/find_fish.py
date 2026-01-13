@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 from ultralytics.engine.results import Results
 
-class find_fish:
+class FindFish:
     '''Image detection for fish'''
     def __init__(self):
         pass
